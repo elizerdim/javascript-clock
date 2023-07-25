@@ -1,0 +1,43 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: lightgray url(./images/leaves-shadow-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.clock {
+    border: 10px solid white;
+    border-radius: 50%;
+    width: min(70vw, 70vh);
+    min-width: 20em;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+}
+
+.attribution {
+    font-size: .8em;
+    width: 100%;
+    text-align: center;
+    padding: 2em 0 1em;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
