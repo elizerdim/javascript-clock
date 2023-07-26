@@ -94,12 +94,18 @@ main {
 	transform: rotate(330deg);
 }
 
+.hour-hand,
+.min-hand,
+.second-hand {
+  position: relative;
+  transform-origin: 50% 100%;
+}
+
 .hour-hand {
   width: 8px;
   height: min(12vw, 12vh);
-  background-color: white;
   border-radius: 4px 4px 0 0;
-  position: relative;
+  background-color: #eed9c4;
   left: calc(50% - 4px);
   top: calc(min(31vw, 31vh) - min(12vw, 12vh));
 }
@@ -107,9 +113,8 @@ main {
 .min-hand {
   width: 6px;
   height: min(18vw, 18vh);
-  background-color: white;
   border-radius: 4px 4px 0 0;
-  position: relative;
+  background-color: #fff0db;
   left: calc(50% - 3px);
   top: calc(min(31vw, 31vh) - min(30vw, 30vh));
 }
@@ -117,10 +122,20 @@ main {
 .second-hand {
   width: 4px;
   height: min(22vw, 22vh);
-  background-color: white;
-  position: relative;
+  border-radius: 2px 2px 0 0;
+  background-color: #faf0e6;
   left: calc(50% - 2px);
   top: calc(min(31vw, 31vh) - min(52vw, 52vh));
+}
+
+.hand-cover {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+  left: calc(50% - 6px);
+  top: calc(min(31vw, 31vh) - min(52vw, 52vh) - 6px);
 }
 
 .attribution {
