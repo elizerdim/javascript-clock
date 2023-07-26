@@ -1,43 +1,135 @@
 *, *::after, *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-    background: lightgray url(./images/leaves-shadow-background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+	background: lightgray url(./images/leaves-shadow-background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 main {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1em;
 }
 
 .clock {
-    border: 10px solid white;
-    border-radius: 50%;
-    width: min(70vw, 70vh);
-    min-width: 20em;
-    aspect-ratio: 1 / 1;
-    margin: 0 auto;
+	border: 10px solid white;
+	border-radius: 50%;
+	width: min(70vw, 70vh);
+	aspect-ratio: 1 / 1;
+	margin: 0 auto;
+	box-shadow: 4px 4px 10px rgba(0,0,0,0.3),
+							-2px -2px 10px rgba(67,67,67,0.5),
+							inset 4px 4px 10px rgba(0,0,0,0.5),
+							inset -2px -2px 10px rgba(67,67,67,0.5);
+}
+
+.clock-face {
+  /* outline: 2px solid red; */
+	border-radius: 50%;
+	width: min(62vw, 62vh);
+	aspect-ratio: 1 / 1;
+	margin: min(4vw, 4vh) auto;
+}
+
+.hour {
+	width: 4px;
+	height: 20px;
+	background-color: white;
+	position: absolute;
+	left: calc(50% - 2px);
+	transform-origin: 2px calc(min(31vw, 31vh));
+}
+
+.hour:nth-of-type(2) {
+	transform: rotate(30deg);
+}
+
+.hour:nth-of-type(3) {
+	transform: rotate(60deg);
+}
+
+.hour:nth-of-type(4) {
+	transform: rotate(90deg);
+}
+
+.hour:nth-of-type(5) {
+	transform: rotate(120deg);
+}
+
+.hour:nth-of-type(6) {
+	transform: rotate(150deg);
+}
+
+.hour:nth-of-type(7) {
+	transform: rotate(180deg);
+}
+
+.hour:nth-of-type(8) {
+	transform: rotate(210deg);
+}
+
+.hour:nth-of-type(9) {
+	transform: rotate(240deg);
+}
+
+.hour:nth-of-type(10) {
+	transform: rotate(270deg);
+}
+
+.hour:nth-of-type(11) {
+	transform: rotate(300deg);
+}
+
+.hour:nth-of-type(12) {
+	transform: rotate(330deg);
+}
+
+.hour-hand {
+  width: 8px;
+  height: min(12vw, 12vh);
+  background-color: white;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  left: calc(50% - 4px);
+  top: calc(min(31vw, 31vh) - min(12vw, 12vh));
+}
+
+.min-hand {
+  width: 6px;
+  height: min(18vw, 18vh);
+  background-color: white;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  left: calc(50% - 3px);
+  top: calc(min(31vw, 31vh) - min(30vw, 30vh));
+}
+
+.second-hand {
+  width: 4px;
+  height: min(22vw, 22vh);
+  background-color: white;
+  position: relative;
+  left: calc(50% - 2px);
+  top: calc(min(31vw, 31vh) - min(52vw, 52vh));
 }
 
 .attribution {
-    font-size: .8em;
-    width: 100%;
-    text-align: center;
-    padding: 2em 0 1em;
+	font-size: .8em;
+	width: 100%;
+	text-align: center;
+	padding: 2em 0 1em;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+	color: hsl(228, 45%, 44%);
 }
