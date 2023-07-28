@@ -113,11 +113,11 @@ main {
 
 .min-hand {
   width: 6px;
-  height: min(18vw, 18vh);
+  height: min(21vw, 21vh);
   border-radius: 4px 4px 0 0;
   background-color: #fff0db;
   left: calc(50% - 3px);
-  top: calc(min(31vw, 31vh) - min(30vw, 30vh));
+  top: calc(min(31vw, 31vh) - min(33vw, 33vh));
 }
 
 .second-hand {
@@ -126,7 +126,7 @@ main {
   border-radius: 2px 2px 0 0;
   background-color: #faf0e6;
   left: calc(50% - 2px);
-  top: calc(min(31vw, 31vh) - min(52vw, 52vh));
+  top: calc(min(31vw, 31vh) - min(55vw, 55vh));
 }
 
 .hand-cover {
@@ -136,7 +136,7 @@ main {
   border-radius: 50%;
   position: relative;
   left: calc(50% - 6px);
-  top: calc(min(31vw, 31vh) - min(52vw, 52vh) - 6px);
+  top: calc(min(31vw, 31vh) - min(55vw, 55vh) - 6px);
 }
 
 .attribution {
